@@ -25,9 +25,9 @@ repeat{
  a<-a+1
 }
 
-#df1<-data.frame(restaurants,linkn)
+df1<-data.frame(restaurants,linkn)
 
-fileName<-paste0("testDomicilios_",as.character.Date(Sys.time()),".csv")
+fileName<-paste0("RestaurantsDomicilios_",as.character.Date(Sys.time()),".csv")
 write.csv(df1, file = fileName)
 
 
@@ -127,5 +127,6 @@ counter=counter+1
 rd$close()
 
 df<-data.frame(Name,Total_comments,Times,Shippings,Deliveries,Comments,Dates,Rankings)
-
+fileName<-paste0("Restaurants&Comments_",as.character.Date(Sys.time()),".csv")
+write.csv(df, file = fileName)
 
